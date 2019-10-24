@@ -1,0 +1,67 @@
+.tile {
+  background: lightgrey;
+  height: 20px;
+  width: 20px;
+  float: left;
+  border-style: outset;
+  border-width: 2px;
+}
+
+.explored {
+  border-style: inset;
+}
+
+.bombed {
+  border-style: inset;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.row {
+  display: block;
+  margin: 0 auto;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} 
+
+.modal-screen {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  position: absolute;
+  z-index: 3;
+  background: white;
+  margin: 0 auto;
+  top: 20%;
+  padding: 10px;
+  width: 180px;
+}
+
+.modal-form h1 {
+  font-size: 36px;
+}
+p {
+  margin: 0px;
+}

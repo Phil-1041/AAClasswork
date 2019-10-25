@@ -1,11 +1,11 @@
 {
-  "name": "minesweeper",
+  "name": "todos",
   "version": "1.0.0",
   "description": "",
-  "main": "minesweeper.js",
+  "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack --mode=development --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --mode=development --watch"
   },
   "keywords": [],
   "author": "",

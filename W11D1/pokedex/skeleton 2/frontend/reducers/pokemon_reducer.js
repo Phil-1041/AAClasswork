@@ -1,17 +1,18 @@
-import { RECEIVE_ALL_POKEMON } from '../actions/pokemon_actions';
+import { RECEIVE_ALL_POKEMON, RECEIVE_POKE } from '../actions/pokemon_actions';
 
 const pokemonReducer = (state = {}, action) => {
   Object.freeze(state);
-  const nextState = Object.assign({}, state);
-
+  let nextState = Object.assign({}, state);
+  // debugger
   switch(action.type) {
     case (RECEIVE_ALL_POKEMON):
-      // console.log(action.pokemon)
-      action.pokemon.forEach(poke => {
-        nextState[poke.id] = poke
-      });
-      // nextState["entities"] = action.pokemon
+      nextState = action.pokemon
       return nextState;
+    case (RECEIVE_POKE):
+      nextState[action.payload.poke.id] = action.payload.poke
+      return nextState;
+    
+      // return action.payload.poke;
     default:
       return state;
   }
